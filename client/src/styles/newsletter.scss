@@ -1,0 +1,102 @@
+.newsletter {
+  background-color: #056552;
+  letter-spacing: 0.05em;
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  &-background {
+    width: 287px;
+    height: 136px;
+    border-radius: 8px;
+    .newsletter-signup {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      h1 {
+        font-family: var(--secondary-font);
+        font-weight: 400;
+        line-height: 20px;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #ffe1b9;
+        white-space: nowrap;
+      }
+      &_input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 8px;
+        width: 232px;
+        background-color: #ffffff;
+        height: 32px;
+        border-radius: 4px;
+        input {
+          padding-left: 23px;
+          &::placeholder {
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 12px;
+            letter-spacing: 0.06em;
+            color: #b3b5b5;
+          }
+        }
+        .input-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          width: 32px;
+          cursor: pointer;
+          color: #ffffff;
+          &:hover {
+            background-color: #ee732c;
+            border-radius: 0 4px 4px 0;
+            svg path {
+              fill: #ffffff;
+            }
+          }
+        }
+      }
+      h6 {
+        line-height: 20px;
+        font-weight: 400;
+        font-size: 12px;
+        color: #ffffff;
+      }
+    }
+    .newsletter-done {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 8px;
+      h1 {
+        font-family: var(--secondary-font);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #056552;
+        margin-top: 14px;
+      }
+      h6 {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.02em;
+        color: #6b6c6b;
+      }
+    }
+    &:hover {
+      .newsletter-signup {
+        h1,
+        h6 {
+          color: #056552;
+        }
+      }
+    }
+  }
+}

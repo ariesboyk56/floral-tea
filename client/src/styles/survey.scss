@@ -1,0 +1,75 @@
+.survey {
+  color: #056552;
+  .container-default {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--background-color);
+    height: 192px;
+    padding: 0 26.5px;
+    h1 {
+      font-family: var(--secondary-font);
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    h5 {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.05em;
+    }
+    &_list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0 16px;
+      margin: 8px 0;
+      .icons:hover {
+        cursor: pointer;
+        path {
+          fill: #ee732c;
+        }
+      }
+    }
+  }
+  .container-done {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+    height: 192px;
+    .content {
+      width: 267px;
+      text-align: center;
+      img{
+        margin-bottom: 16px;
+      }
+      h1 {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #ee732c;
+        margin-bottom: 8px;
+      }
+      p {
+        width: 210px;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: #056552;
+        margin: 0 auto;
+      }
+    }
+  }
+}

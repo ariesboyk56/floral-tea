@@ -1,0 +1,21 @@
+.aboutContainer {
+  background-color: #056552;
+  padding: 19px 18.25px 31px 18.25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  position: relative;
+
+  .about1,
+  .about2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
