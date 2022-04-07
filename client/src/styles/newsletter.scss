@@ -50,6 +50,13 @@
           width: 32px;
           cursor: pointer;
           color: #ffffff;
+          svg {
+            width: 10px;
+            path {
+              fill: #ee732c;
+              stroke: #ee732c;
+            }
+          }
           &:hover {
             background-color: #ee732c;
             border-radius: 0 4px 4px 0;

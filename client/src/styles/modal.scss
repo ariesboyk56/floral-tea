@@ -1,0 +1,95 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  .modal-rate {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 288px;
+    background: #ffffff;
+    border-radius: 6px;
+    text-align: center;
+    .close-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      width: 44px;
+      height: 44px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .model-rate_content {
+      width: 200px;
+      margin: 49px auto;
+      .model-rate_content-rate div:first-child {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        color: #ee732c;
+        padding-bottom: 12px;
+      }
+      .model-rate_content-rate div:last-child {
+        padding-bottom: 12px;
+      }
+      .model-rate_content-review {
+        text-align: left;
+      }
+      .model-rate_content-review label {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        color: #056552;
+        padding-bottom: 8px;
+      }
+      .model-rate_content-review div.input {
+        width: 100%;
+        border: 0.5px solid #939494;
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 0.06em;
+        color: #939494;
+        input::placeholder,
+        textarea::placeholder {
+          padding-left: 10px;
+        }
+        &.input-text {
+          height: 31px;
+        }
+        &.textarea {
+          padding-top: 8px;
+          textarea {
+            height: 69px;
+            width: 100%;
+            border: none;
+            outline: none;
+          }
+        }
+      }
+      .model-rate_content-btn {
+        div.rule {
+          padding: 8px 0 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0 8px;
+        }
+        div:nth-child(2) {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

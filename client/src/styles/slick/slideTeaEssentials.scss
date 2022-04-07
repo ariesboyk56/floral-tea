@@ -1,0 +1,128 @@
+.tea-essentials_container {
+  width: 100%;
+  background-color: #056552;
+  padding: 80px 18px;
+  .content {
+    padding: 0 10%;
+    &-title {
+      margin: 0 auto;
+      width: 513px;
+      h1 {
+        font-family: var(--secondary-font);
+        font-weight: 600;
+        font-size: 52px;
+        line-height: 65px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #ffe1b9;
+      }
+      &_desc {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+    &-slide {
+      margin: 43px auto 48px;
+      .content-slide_item {
+        .wrap-item {
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .item-img {
+            width: 200px;
+            height: 268px;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.08),
+              3px 3px 5px rgba(0, 0, 0, 0.18);
+            border-radius: 175px 175px 0px 0px;
+            img {
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
+              box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.08),
+                3px 3px 5px rgba(0, 0, 0, 0.18);
+              border-radius: 175px 175px 0px 0px;
+            }
+          }
+          h3 {
+            margin-top: 16px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    .style-btn-1-1.w277h62 {
+      .style-btn-1-2.w277h62 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  //CSS
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .tea-essentials_container {
+    padding: 32px 0;
+    .content {
+      padding: 0 8px;
+      &-title {
+        margin: 0 auto;
+        width: 283px;
+        h1 {
+          font-size: 26px;
+          line-height: 32px;
+        }
+        &_desc {
+          font-size: 12px;
+          line-height: 15px;
+        }
+      }
+      &-slide {
+        svg.slick-arrow.slick-prev,
+        svg.slick-arrow.slick-next {
+          display: none;
+        }
+        .content-slide_item {
+          .wrap-item {
+            .item-img {
+              width: 131px;
+              height: 203px;
+              img {
+                object-fit: fill;
+              }
+            }
+            h3 {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .style-btn-1-1.w277h62 {
+        width: 144px;
+        height: 35px;
+        .style-btn-1-2.w277h62 {
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+}

@@ -21,7 +21,7 @@ const Newsletter = () => {
               <div className="newsletter-signup_input">
                 <input type="text" placeholder="Your Email Address" />
                 <div className="input-icon" onClick={() => setIsShow(false)}>
-                <ArrowRight />
+                  <ArrowRight />
                 </div>
               </div>
               <h6>Sign up & Get 10% off your first purchase</h6>

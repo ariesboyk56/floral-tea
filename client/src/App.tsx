@@ -1,3 +1,5 @@
+import { FC } from "react";
+import { useSelector } from "react-redux";
 import Admin from "./pages/layouts/Admin";
 import {
   BrowserRouter as Router,
@@ -20,41 +22,46 @@ import MyProfile from "./components/Auth/Profile/MyProfile";
 import MyAddress from "./components/Auth/Profile/MyAddress";
 import MyWallet from "./components/Auth/Profile/MyWallet";
 import MyOrders from "./components/Auth/Profile/MyOrders";
+import Notification from "./components/Notification";
+import AuthContextProvider from "./contexts/AuthContext";
 
-function App() {
+const App: FC = () => {
+  const { message, type } = useSelector((state: any) => state.notification);
   return (
     <Router
     // history={history}
     >
-      <Routes>
-        <Route path={path.ADMIN} element={<Admin />}>
-          <Route path={path.EMPTY} element={<Dashboard />} />
-        </Route>
+      <AuthContextProvider>
+        <Routes>
+          <Route path={path.ADMIN} element={<Admin />}>
+            <Route path={path.EMPTY} element={<Dashboard />} />
+          </Route>
 
-        <Route path={path.HOME} element={<Main />}>
-          <Route path={path.EMPTY} element={<Home />} />
-          <Route path={path.ABOUT} element={<About />} />
-          <Route path="product" element={<Product />} />
+          <Route path={path.HOME} element={<Main />}>
+            <Route path={path.EMPTY} element={<Home />} />
+            <Route path={path.ABOUT} element={<About />} />
+            <Route path="product" element={<Product />} />
 
-          <Route path={path.AUTH} element={<Outlet />}>
-            <Route path={path.EMPTY} element={<Login />} />
-            <Route path={path.REGISTER} element={<Register />} />
-            <Route path={path.FORGOT} element={<Forgot />} />
-            <Route path={path.FINDORDERS} element={<FindOrders />} />
+            <Route path={path.AUTH} element={<Outlet />}>
+              <Route path={path.EMPTY} element={<Login />} />
+              <Route path={path.REGISTER} element={<Register />} />
+              <Route path={path.FORGOT} element={<Forgot />} />
+              <Route path={path.FINDORDERS} element={<FindOrders />} />
 
-            <Route path={path.EDIT} element={<Outlet />}>
-              <Route path={path.EMPTY} element={<Profile />} />
-              <Route path={path.PROFILE} element={<MyProfile />} />
-              <Route path={path.ADDRESS} element={<MyAddress />} />
-              <Route path={path.WALLET} element={<MyWallet />} />
-              <Route path={path.ORDERS} element={<MyOrders />} />
+              <Route path={path.EDIT} element={<Outlet />}>
+                <Route path={path.EMPTY} element={<Profile />} />
+                <Route path={path.PROFILE} element={<MyProfile />} />
+                <Route path={path.ADDRESS} element={<MyAddress />} />
+                <Route path={path.WALLET} element={<MyWallet />} />
+                <Route path={path.ORDERS} element={<MyOrders />} />
+              </Route>
             </Route>
           </Route>
-        </Route>
-      </Routes>
-      {/* <Toast /> Thông báo hoat động */}
+        </Routes>
+        {message && <Notification message={message} type={type} />}
+      </AuthContextProvider>
     </Router>
   );
-}
+};
 
 export default App;

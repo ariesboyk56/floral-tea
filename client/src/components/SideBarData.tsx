@@ -1,4 +1,5 @@
-import { BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
+import { ReactComponent as DropDown } from "../images/icons/DropDown.svg";
+import { ReactComponent as DropUp } from "../images/icons/DropUp.svg";
 
 export interface ISideBarData {
   title: string;
@@ -12,8 +13,8 @@ export const SideBarData: ISideBarData[] = [
   {
     title: "Tea",
     path: "/tea",
-    iconClosed: <BsChevronCompactDown />,
-    iconOpened: <BsChevronCompactUp />,
+    iconClosed: <DropDown />,
+    iconOpened: <DropUp />,
     subNav: [
       {
         title: "All teas",
@@ -23,24 +24,72 @@ export const SideBarData: ISideBarData[] = [
       },
       {
         title: "By Benefit",
+        iconClosed: <DropDown />,
+        iconOpened: <DropUp />,
+        subNav: [
+          {
+            title: "Energy",
+          },
+          {
+            title: "Detox & Digestion",
+          },
+          {
+            title: "Relax",
+          },
+          {
+            title: "Wellness",
+          },
+          {
+            title: "Immunity",
+          },
+        ],
       },
       {
         title: "By type",
+        iconClosed: <DropDown />,
+        iconOpened: <DropUp />,
+        subNav: [
+          {
+            title: "Herbal",
+          },
+          {
+            title: "Mate’",
+          },
+          {
+            title: "Matcha",
+          },
+          {
+            title: "Pu’erh",
+          },
+          {
+            title: "Rooibos",
+          },
+        ],
       },
       {
         title: "Sales",
       },
-    ]
+    ],
   },
   {
-    title: "Teaware",
-    path: "/teaware",
+    title: "About",
+    path: "/about",
+    iconClosed: <DropDown />,
+    iconOpened: <DropUp />,
+    subNav: [
+      {
+        title: "Our Story",
+      },
+      {
+        title: "Partners",
+      },
+    ],
   },
   {
     title: "Explore",
     path: "/explore",
-    iconClosed: <BsChevronCompactDown />,
-    iconOpened: <BsChevronCompactUp />,
+    iconClosed: <DropDown />,
+    iconOpened: <DropUp />,
     subNav: [
       {
         title: "Find my tea Quiz",
@@ -53,14 +102,14 @@ export const SideBarData: ISideBarData[] = [
       },
       {
         title: "Blog",
-      }
-    ]
+      },
+    ],
   },
   {
     title: "Account",
     path: "/account",
-    iconClosed: <BsChevronCompactDown />,
-    iconOpened: <BsChevronCompactUp />,
+    iconClosed: <DropDown />,
+    iconOpened: <DropUp />,
     subNav: [
       {
         title: "Sign Up/Log In",
@@ -70,21 +119,21 @@ export const SideBarData: ISideBarData[] = [
       },
       {
         title: "My wishlist",
-      }
-    ]
+      },
+    ],
   },
   {
     title: "Language",
     path: "/language",
-    iconClosed: <BsChevronCompactDown />,
-    iconOpened: <BsChevronCompactUp />,
+    iconClosed: <DropDown />,
+    iconOpened: <DropUp />,
     subNav: [
       {
         title: "English",
       },
       {
         title: "Vietnamese",
-      }
-    ]
+      },
+    ],
   },
 ];

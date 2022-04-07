@@ -4,7 +4,10 @@
   font-family: var(--primary-font);
   box-sizing: border-box;
 }
-
+.wide {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 ul,
 h1,
 h2,
@@ -44,8 +47,8 @@ select {
   //     0px 1.49432px 1.16225px rgba(98, 99, 97, 0.0224916);
   //   border-radius: 4px;
   // }
-  option{
-    &:first-child{
+  option {
+    &:first-child {
       display: none;
     }
   }
@@ -163,10 +166,14 @@ input {
   height: 35px;
   border-radius: 4px;
   margin: 0 auto;
-  &.w86h27{
+  &.w86h27 {
     width: 86px;
     height: 27px;
     margin-right: 0;
+  }
+  &.w277h62 {
+    width: 277px;
+    height: 62px;
   }
   .style-btn-1-2 {
     background-color: #ee732c;
@@ -176,6 +183,10 @@ input {
     position: absolute;
     bottom: 0;
     right: 0;
+    &.w277h62 {
+      font-size: 24px;
+      line-height: 30px;
+    }
     &:hover {
       right: 4px;
       bottom: 4px;
@@ -262,7 +273,7 @@ input {
 // End avatar profile
 
 // Button primary
-.btn.primary {
+.btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -274,10 +285,18 @@ input {
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 0.02em;
-  background: #ee732c;
-  color: #ffffff;
   margin: 0 auto;
-  &.w86h27{
+  color: #ffffff;
+  &.primary {
+    background: #ee732c;
+  }
+  &.disable {
+    background: #b3b5b5;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  &.w86h27 {
     width: 86px;
     height: 27px;
   }
