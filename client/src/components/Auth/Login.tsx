@@ -43,7 +43,6 @@ const Login = () => {
     try {
       const res = await authApi.login(data);
       if(res.success) {
-        console.log(res.data)
         setAuth(res.data)
         dispatch(setNotification({message: "Logged successfully", type: "success"}))
         localStorage.setItem(LOCAL_STORAGE_TOKEN, res.data.accessToken)

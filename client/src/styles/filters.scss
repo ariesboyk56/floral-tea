@@ -1,0 +1,127 @@
+.filter-container {
+  width: 100%;
+  max-width: 320px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: #393a3a;
+  margin: 40px 0 40px 10px;
+  .title-mobile {
+    display: none;
+  }
+  .title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.06em;
+    color: #6b6c6b;
+  }
+  .wrapper {
+    .filter {
+      &-name {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f6f6f6;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        color: #393a3a;
+        padding: 8px 16px 8px 0px;
+        cursor: pointer;
+      }
+      &-list {
+        display: none;
+        &.show {
+          display: block;
+        }
+        padding: 24px 45px;
+        input,
+        label {
+          cursor: pointer;
+        }
+        .filter-item {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 0 24px;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  //CSS
+  .filter-container {
+    position: relative;
+    margin: 0;
+    .title {
+      display: none;
+    }
+    .title-mobile {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 22px;
+      width: 50vw;
+      padding-left: 8px;
+      margin-top: 11px;
+      margin-bottom: 11px;
+      background-color: #ffffff;
+      border-right: 1px solid #B3B5B5;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 15px;
+    }
+    .wrapper {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: #ffffff;
+      width: 100vw;
+      margin-top: 44px;
+      box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.15);
+      border-radius: 0px 0px 6px 6px;
+      &.show{
+        display: block;
+      }
+      .filter {
+        padding: 8px 17px;
+        &-name {
+          background-color: #ffffff;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 15px;
+          // padding: 8px 16px 8px 0px;
+          padding: 0 0 6px 0;
+          .filter-icon {
+            display: none;
+          }
+        }
+        &-list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          padding: 0;
+          input,
+          label {
+            cursor: pointer;
+          }
+          .filter-item {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 15px;
+            gap: 0 24px;
+          }
+        }
+      }
+    }
+  }
+}

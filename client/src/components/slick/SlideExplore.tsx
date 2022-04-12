@@ -1,6 +1,8 @@
 import { FC } from "react";
 import Slider from "react-slick";
 import "../../styles/slick/slideExplore.scss";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { ReactComponent as ArrowLeft } from "../../images/icons/ArrowLeft.svg";
 import { ReactComponent as ArrowRight } from "../../images/icons/ArrowRight.svg";
 interface IData {
@@ -56,9 +58,11 @@ const SlideExplore: FC = () => {
             <div key={index}>
               <div className="wrap-item">
                 <div className="item-left">
-                    <div className="item-img">
-                      <img src={data.url} alt={data.name} />
-                    </div>
+                  <div className="item-img">
+                    <img src={data.url} alt={data.name} />
+                  </div>
+                  <div className="item-icon">
+                  </div>
                 </div>
                 <div className="item-right">
                   <div className="item-name">{data.name}</div>
@@ -68,7 +72,7 @@ const SlideExplore: FC = () => {
                   </div>
                   <div className="style-btn-1-1 w277h62">
                     <div className="btn primary style-btn-1-2 w277h62">
-                        READ MORE
+                      READ MORE
                     </div>
                   </div>
                 </div>

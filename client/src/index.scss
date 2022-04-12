@@ -57,6 +57,9 @@ input {
   border: none;
   outline: none;
   color: #393a3a;
+  &[type="checkbox"]{
+    accent-color: #0E927D;
+  }
 }
 .input-group {
   margin-bottom: 16px;

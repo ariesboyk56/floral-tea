@@ -1,0 +1,92 @@
+.Pagination {
+  $this: &;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  outline: transparent;
+
+  & > li {
+    margin: 12px;
+    width: 60px;
+    height: 56px;
+  }
+
+  & > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #6b6c6b;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    margin: 0;
+    text-decoration: none;
+    outline: transparent;
+    user-select: none;
+    cursor: pointer;
+    svg {
+      path {
+        fill: #ee732c;
+      }
+    }
+    &:hover {
+      background-color: #6b6c6b44;
+    }
+  }
+
+  & > #{$this}__active > a {
+    background-color: #056552;
+    border-color: #056552;
+    color: white;
+  }
+
+  & > #{$this}__active > a,
+  & > #{$this}__active > a:hover,
+  & > #{$this}__active > a:focus {
+    background-color: #056552;
+    border-color: #056552;
+    outline: transparent;
+    cursor: default;
+  }
+
+  & > .disabled > a {
+    cursor: default;
+
+    svg {
+      path {
+        fill: #6b6c6b44;
+      }
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+/* Mobile */
+@media (max-width: 739px) {
+  .Pagination {
+    $this: &;
+    & > li {
+      margin: 5px;
+      width: 17px;
+      height: 16px;
+    }
+
+    & > li > a {
+      font-size: 12px;
+      line-height: 15px;
+      border-radius: 2px;
+      svg {
+        width: 6px;
+          height: 10px;
+      }
+    }
+  }
+}

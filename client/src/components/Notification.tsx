@@ -1,9 +1,6 @@
 import { FC, useState, useEffect, useRef } from "react";
 import "../styles/notification.scss";
 import ReactDOM from 'react-dom';
-import warning from "../images/notification/warning.png";
-import error from "../images/notification/danger.png";
-import success from "../images/notification/success.png";
 import close from "../images/icons/close.png";
 import { useDispatch } from "react-redux";
 import { setNotification } from "../actions/notificationAction";
@@ -84,10 +81,10 @@ const Notification: FC<INotification> = ({ message, type }) => {
           <img
             srcSet={`${
               type === "success"
-                ? success
+                ? "https://lh3.googleusercontent.com/GVwJwdjbc5kHVlQAcsflVyAzG9c7v0CF5i3ToluiZcEkaMbcVtifVr_ialA5uEV4sg0fdqXaVjwxZ0VcpTqb5nI1EEzkKG-PB6FNMCoYtPznO5LU3892gFnS2PreJE20PIalpRMiKA=s40-p-k"
                 : type === "error"
-                ? error
-                : warning
+                ? "https://lh3.googleusercontent.com/xCBKH2CbLU7pu_SXfBJcYeG4gL68sm_D_w_YJpWoPJv6J4SA5dgceEP6azVFPI7e4vSuxPN4DbjbfRKwpl8kgnlP5xivvU39tUlr9xdVvp-h7yfI2_YbsqZIXNvWqqglbTbyr9qNNg=s40-p-k"
+                : "https://lh3.googleusercontent.com/H_3iFFnqW9tILeAwxvinDPnRRRhmzsjmO2zI_ZUT3VF4u03HG119D3n2MMmRfoYcKKLLjKHhlsdxqmVr-6OgsQrYMxLJ1DzAt_7GElZlzdcofdksZhTlsurGgnfE0sgg91-2EFcQdA=s40-p-k"
             } 2x`}
             alt={type}
           />

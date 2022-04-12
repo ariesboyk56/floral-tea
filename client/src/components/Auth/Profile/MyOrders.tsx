@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../../styles/account.scss";
 import { ReactComponent as ArrowRight } from "../../../images/icons/ArrowRight.svg";
-import product from "../../../images/product/product1.png";
 import ModalRate from "../../ModalRate";
 const MyOrders = () => {
   const [isRate, setIsRate] = useState<boolean>(false);
@@ -38,7 +37,7 @@ const MyOrders = () => {
                   <div className="info-space"></div>
                   <div className="info-body">
                     <div className="info-body_left">
-                      <img alt="img" srcSet={`${product} 2x`} />
+                      <img alt="img" src="https://lh3.googleusercontent.com/k0YwPB-hkyEMDiIHKJWeN4tZP4vVs4ssTXf3TWj8v1jEPnAUft8bTMx3UmMzfTu8aPqgR-2NKzoa6je0Es0PYI5yk8ayEIiZdmllMV1yWOIMCsNzKt_Q5qruwAXPEJWJKPXSlFyoFA=w2400" />
                     </div>
                     <div className="info-body_right">
                       <div className="info-body_title">Lemon Meringue tea</div>

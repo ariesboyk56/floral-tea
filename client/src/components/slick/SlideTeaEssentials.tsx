@@ -1,5 +1,7 @@
 import { FC } from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "../../styles/slick/slideTeaEssentials.scss";
 import { ReactComponent as ArrowLeft } from "../../images/icons/ArrowLeft.svg";
 import { ReactComponent as ArrowRight } from "../../images/icons/ArrowRight.svg";

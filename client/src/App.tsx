@@ -17,13 +17,15 @@ import Register from "./components/Auth/Register";
 import Forgot from "./components/Auth/Forgot";
 import Profile from "./components/Auth/Profile/Profile";
 import FindOrders from "./components/Auth/FindOrders";
-import Product from "./pages/Main/Product";
+import Tea from "./pages/Main/Tea";
 import MyProfile from "./components/Auth/Profile/MyProfile";
 import MyAddress from "./components/Auth/Profile/MyAddress";
 import MyWallet from "./components/Auth/Profile/MyWallet";
 import MyOrders from "./components/Auth/Profile/MyOrders";
 import Notification from "./components/Notification";
 import AuthContextProvider from "./contexts/AuthContext";
+import TeaList from "./components/Tea/TeaList";
+import TeaDetail from "./components/Tea/TeaDetail";
 
 const App: FC = () => {
   const { message, type } = useSelector((state: any) => state.notification);
@@ -40,7 +42,10 @@ const App: FC = () => {
           <Route path={path.HOME} element={<Main />}>
             <Route path={path.EMPTY} element={<Home />} />
             <Route path={path.ABOUT} element={<About />} />
-            <Route path="product" element={<Product />} />
+            <Route path={path.TEA} element={<Tea />}>
+              <Route path={path.EMPTY} element={<TeaList />} />
+              <Route path={path.DETAIL} element={<TeaDetail />} />
+            </Route>
 
             <Route path={path.AUTH} element={<Outlet />}>
               <Route path={path.EMPTY} element={<Login />} />

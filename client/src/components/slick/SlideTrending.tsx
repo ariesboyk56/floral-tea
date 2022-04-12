@@ -12,8 +12,9 @@ interface IPropertiesData {
   name: string;
   url: string;
 }
-interface IData {
+export interface IData {
   name: string;
+  price: number;
   url: string;
   waterUrl: string;
   filters: IFiltersData;
@@ -21,9 +22,10 @@ interface IData {
   desc: string;
   rating: number;
 }
-const datas: IData[] = [
+export const datas: IData[] = [
   {
     name: "DARK CHOCOLATE PEPPERMINT TEA",
+    price: 9.78,
     url: "https://lh3.googleusercontent.com/k0YwPB-hkyEMDiIHKJWeN4tZP4vVs4ssTXf3TWj8v1jEPnAUft8bTMx3UmMzfTu8aPqgR-2NKzoa6je0Es0PYI5yk8ayEIiZdmllMV1yWOIMCsNzKt_Q5qruwAXPEJWJKPXSlFyoFA=w2400",
     waterUrl:
       "https://lh3.googleusercontent.com/Bckqqi9f8VbYincpoPsNCZ3ERgVzXKtd48z6Yx3ZnhZZGDvp3sctLwWqIo_cSy2WFsR8V9MMU0VSwPnaG8w0PvgvNzz8CRS22Q2Lq3NSu9GEq3dyRZ3U9ENiv7NJrQHST3Mto-BevA=w2400",
@@ -51,6 +53,7 @@ const datas: IData[] = [
   },
   {
     name: "DARK CHOCOLATE PEPPERMINT tea",
+    price: 9.78,
     url: "https://lh3.googleusercontent.com/RxGKTWdVcAyWmwt_uDOO3SweAV1Q-47q1nSITXUBTnxXG4_3rPWextLHas1Xq0IBbCM984h1HYk_73BGLXJUbfuEZvvXjHDYjgtED0pWsdWMEjDG4s9nMGNU5mp-p7lZ19rHwSs02w=w2400",
     waterUrl:
       "https://lh3.googleusercontent.com/G94Y43HYZZw04ZDeB6c3llZhwOLBroMrZpMvDJjT4FOAp-A5Lv4bKz4mSFxrUlFTbq0ufMoftmt6W3rh-aL6jFnEiCHtYJmE_iJUJWVAxWhaps3QsHox_vcZgJzowsBnl8e-X9EXOw=w2400",
@@ -78,6 +81,7 @@ const datas: IData[] = [
   },
   {
     name: "LEMON MERINGUE BLEND TEA",
+    price: 9.78,
     url: "https://lh3.googleusercontent.com/gl43xfcIPI2qjbhWgKTbOhSwKHJVHeYrhYhPrUARttEmSttPY58DM_PDGbRkISTSdpjCTqVQD70rmgZOWGnb3dH1QnY1eLffqWgVOdGx3VJ9VQrLleUkw-QJTK7jgMLSCNvoa-BpBQ=w2400",
     waterUrl:
       "https://lh3.googleusercontent.com/Bckqqi9f8VbYincpoPsNCZ3ERgVzXKtd48z6Yx3ZnhZZGDvp3sctLwWqIo_cSy2WFsR8V9MMU0VSwPnaG8w0PvgvNzz8CRS22Q2Lq3NSu9GEq3dyRZ3U9ENiv7NJrQHST3Mto-BevA=w2400",
@@ -105,6 +109,7 @@ const datas: IData[] = [
   },
   {
     name: "LEMON MERINGUE BLEND TEA",
+    price: 9.78,
     url: "https://lh3.googleusercontent.com/T4QNpP7I5ktcMUY7aYh1ZoPttRHAOzdJtG5vXnwDAdsq4y_2S0-rdxy15Xnn08PudIRJpEflieDvHaCp2A1oRe6ZnlvSesfJET1lXYh63h0j-P7kWA8fzjFa_F5V4G4EFKYSprteSw=w2400",
     waterUrl:
       "https://lh3.googleusercontent.com/Bckqqi9f8VbYincpoPsNCZ3ERgVzXKtd48z6Yx3ZnhZZGDvp3sctLwWqIo_cSy2WFsR8V9MMU0VSwPnaG8w0PvgvNzz8CRS22Q2Lq3NSu9GEq3dyRZ3U9ENiv7NJrQHST3Mto-BevA=w2400",
@@ -133,6 +138,7 @@ const datas: IData[] = [
 ];
 const SlideTrending: FC = () => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
+  const [hover, setHover] = useState<boolean>(false);
   return (
     <div className="trending-container">
       <div className="trending-left">
@@ -178,8 +184,8 @@ const SlideTrending: FC = () => {
           <div className="background-1">
             <div className="background-1-1"></div>
             <div className="background-1-2">
-              <div className="background-3">
-                <img src={datas[slideIndex].url} alt={datas[slideIndex].name} />
+              <div className="background-3" onMouseLeave={()=>setHover(false)} onMouseOver={()=>setHover(true)}>
+                <img src={hover? datas[slideIndex].waterUrl : datas[slideIndex].url} alt={datas[slideIndex].name} />
               </div>
             </div>
           </div>

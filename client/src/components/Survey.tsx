@@ -35,7 +35,7 @@ const Survey = () => {
       ) : (
         <div className="container-done">
           <div className="content">
-            <img alt="group" srcSet={`${Group} 2x`} />
+            <img alt="group" srcSet="https://lh3.googleusercontent.com/dvVpZeuhujZev-02MGtVLnnS9oOSclvDeHVDdEOWElWH3-Ccmi_O0T13hknn-CJDzk8BicPkS3rR64rB0vyMwyfKZBY-DBJU-QardjZ7aW8lNmEwPWdkb7he4HDuxJcvpuBDooe4pQ=w2400 2x" />
             <div>
               <h1>Thank you for sharing your thoughts.</h1>
               <p>

@@ -34,6 +34,7 @@
         gap: 0 72px;
         padding: 12px;
         .item-left {
+          position: relative;
           .item-img {
             border: 1px dashed #ffffff;
             width: 296px;
@@ -46,6 +47,15 @@
               object-fit: cover;
               transform: translate(-12px, -12px);
             }
+          }
+          .item-icon {
+            position: absolute;
+            top: 0;
+            right: 19px;
+            width: 19%;
+            padding-top: 24%;
+            background: url("https://lh3.googleusercontent.com/rWfxPEtxpy1M-VxSU3IPILnrzgAxkRMVSGKwFAaqYF-zzErKi4AJeJdS-qVIBkFFwv9MGlV7C2xeMs82-uEpaV_CRP3W9c1l-GKOpU4dROF7-tBW-bxwdFB3sEAV585l1oroEdZ8-Q=w2400")
+            top center / cover no-repeat;
           }
         }
         .item-right {
@@ -92,12 +102,12 @@
     .content {
       .content-slider {
         .slick-next {
-            right: -30px;
-            top: 131px;
+          right: -30px;
+          top: 131px;
         }
         .slick-prev {
-            left: -30px;
-            top: 131px;
+          left: -30px;
+          top: 131px;
         }
         .wrap-item {
           display: flex;
