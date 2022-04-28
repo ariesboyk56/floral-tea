@@ -26,7 +26,3 @@ export const api_url = {
     base: "http://localhost:5050/api"
 }
 export const LOCAL_STORAGE_TOKEN = "Token"
-export const language = {
-    VI: "vi",
-    EN: "en"
-}

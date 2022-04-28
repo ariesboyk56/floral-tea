@@ -1,5 +1,5 @@
-import { createContext, ReactNode, useReducer, useState } from "react";
-import { authReducer, SET_AUTH } from "../reducers/authReducer";
+import { createContext, ReactNode, useReducer } from "react";
+import { authReducer, SET_AUTH } from "../store/reducers/authReducer";
 interface IAuthContext {
   children: ReactNode;
 }

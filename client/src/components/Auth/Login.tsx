@@ -1,14 +1,14 @@
 import { useContext, useState } from "react";
 import { AxiosError } from "axios";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import "../../styles/account.scss";
 import { ReactComponent as Check } from "../../images/icons/check.svg";
 import { LOCAL_STORAGE_TOKEN, path } from "../../utils/contain";
 import { ICheckInput, IFormInput } from "../../utils/interface";
 import authApi from "../../api/authApi";
 import { onBlur } from "../../utils/checkInput";
-import { useDispatch, useSelector } from "react-redux";
-import { setNotification } from "../../actions/notificationAction";
+import { setNotification } from "../../store/actions/notificationAction";
 import { AuthContext } from "../../contexts/AuthContext";
 
 const Login = () => {

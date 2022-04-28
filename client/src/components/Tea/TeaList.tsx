@@ -1,7 +1,7 @@
 import { FC } from "react";
 import "../../styles/tea.scss";
 import Filters from "../Filters";
-import { datas } from "../slick/SlideTrending"; //--modify
+import { datas } from "../Slick/SlideTrending"; //--modify
 import { BsCart3, BsSuitHeart } from "react-icons/bs";
 import BasicRating from "../Rating";
 import { Pagination } from "../Pagination";

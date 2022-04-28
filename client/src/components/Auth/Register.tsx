@@ -8,7 +8,7 @@ import { path } from "../../utils/contain";
 import { ICheckInput, IFormInput } from "../../utils/interface";
 import { onBlur } from "../../utils/checkInput";
 import authApi from "../../api/authApi";
-import { setNotification } from "../../actions/notificationAction";
+import { setNotification } from "../../store/actions/notificationAction";
 
 const Register = () => {
   const dispatch = useDispatch()

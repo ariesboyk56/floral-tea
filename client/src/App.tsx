@@ -25,7 +25,7 @@ import MyOrders from "./components/Auth/Profile/MyOrders";
 import Notification from "./components/Notification";
 import AuthContextProvider from "./contexts/AuthContext";
 import TeaList from "./components/Tea/TeaList";
-import TeaDetail from "./components/Tea/TeaDetail";
+import TeaDetail from "./components/Tea/TeaDetail/TeaDetail";
 
 const App: FC = () => {
   const { message, type } = useSelector((state: any) => state.notification);

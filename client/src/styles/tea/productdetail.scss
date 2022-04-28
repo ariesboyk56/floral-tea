@@ -1,0 +1,20 @@
+.tea-detail{
+    &_info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 41px;
+        padding: 56px 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .tea-detail{
+        &_info{
+            flex-direction: column;
+            gap: 32px 0;
+            padding: 24px 0;
+        }
+    }
+}

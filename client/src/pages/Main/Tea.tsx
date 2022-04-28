@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Outlet } from "react-router-dom";
-import SlideBackgroundTea from "../../components/slick/SlideBackgroundTea";
+import SlideBackgroundTea from "../../components/Slick/SlideBackgroundTea";
 
 const Tea: FC = () => {
   return (

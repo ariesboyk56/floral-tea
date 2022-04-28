@@ -3,8 +3,8 @@ import "../styles/notification.scss";
 import ReactDOM from 'react-dom';
 import close from "../images/icons/close.png";
 import { useDispatch } from "react-redux";
-import { setNotification } from "../actions/notificationAction";
-import { INotification } from "../constants/notificationConstant";
+import { setNotification } from "../store/actions/notificationAction";
+import { INotification } from "../store/constants/notificationConstant";
 const Notification: FC<INotification> = ({ message, type }) => {
   const containerEl = document.getElementById('notification-root');
   const [notificationMsg, setNotificationMsg] = useState('');

@@ -1,4 +1,4 @@
-import { InitialState, User } from "../contexts/AuthContext"
+import { InitialState, User } from "../../contexts/AuthContext"
 export const SET_AUTH = "SET_AUTH"
 
 interface ISetAuthAction {

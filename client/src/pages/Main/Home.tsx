@@ -1,16 +1,16 @@
 import Newsletter from "../../components/Newsletter"
-import SlideExplore from "../../components/slick/SlideExplore"
-import SlideHomeTop from "../../components/slick/SlideHomeTop"
-import SlideTeaEssentials from "../../components/slick/SlideTeaEssentials"
-import SlideTestimonial from "../../components/slick/SlideTestimonial"
-import SlideTrending from "../../components/slick/SlideTrending"
+import SlideExplore from "../../components/Slick/SlideExplore"
+import SlideHomeTop from "../../components/Slick/SlideHomeTop"
+import SlideTeaEssentials from "../../components/Slick/SlideTeaEssentials"
+import SlideTestimonial from "../../components/Slick/SlideTestimonial"
+import SlideTrending from "../../components/Slick/SlideTrending"
 import Survey from "../../components/Survey"
 
 const Home = () => {
   return (
     <div className='App'>
       <SlideHomeTop />
-      <SlideTrending />
+      <SlideTrending slide/>
       <SlideTeaEssentials />
       <SlideTestimonial />
       <SlideExplore />

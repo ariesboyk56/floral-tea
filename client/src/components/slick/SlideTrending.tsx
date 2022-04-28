@@ -3,6 +3,12 @@ import BasicRating from "../Rating";
 import "../../styles/slick/slideTrending.scss";
 import { ReactComponent as TriArrow } from "../../images/icons/TriArrow.svg";
 import { ReactComponent as PropertiesCol } from "../../images/icons/PropertiesCol.svg";
+import ClickSildeTrending from "./ClickSildeTrending";
+import CartSildeTrending from "./CartSildeTrending";
+interface IProps {
+  slide?: boolean;
+  button?: boolean;
+}
 interface IFiltersData {
   types: string;
   level: string;
@@ -136,9 +142,12 @@ export const datas: IData[] = [
     rating: 5,
   },
 ];
-const SlideTrending: FC = () => {
+const SlideTrending: FC<IProps> = ({ slide, button }) => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
   const [hover, setHover] = useState<boolean>(false);
+  const index = (i: number)=> {
+    setSlideIndex(i)
+  }
   return (
     <div className="trending-container">
       <div className="trending-left">
@@ -147,9 +156,9 @@ const SlideTrending: FC = () => {
             <h4>trending now</h4>
             <div className="name">{datas[slideIndex].name}</div>
             <div className="filters">
-            <span>{datas[slideIndex].filters.benefits}</span>
-            <span>{datas[slideIndex].filters.level}</span>
-            <span>{datas[slideIndex].filters.types}</span>
+              <span>{datas[slideIndex].filters.benefits}</span>
+              <span>{datas[slideIndex].filters.level}</span>
+              <span>{datas[slideIndex].filters.types}</span>
             </div>
           </div>
           <div className="content-desc">
@@ -157,35 +166,36 @@ const SlideTrending: FC = () => {
               <BasicRating type="readOnly" number={datas[slideIndex].rating} />
             </div>
             <div className="desc">{datas[slideIndex].desc}</div>
-            <div className="action">
-              <div>More Detail</div>
-              <TriArrow />
-            </div>
+            {slide && (
+              <div className="action">
+                <div>More Detail</div>
+                <TriArrow />
+              </div>
+            )}
           </div>
         </div>
-        <div className="slider">
-          {datas.map((data, index) => {
-            return (
-              <div
-                className={
-                  slideIndex === index ? "slider-item active" : "slider-item"
-                }
-                key={index}
-                onClick={() => setSlideIndex(index)}
-              >
-                <img src={data.url} alt={data.name} />
-              </div>
-            );
-          })}
-        </div>
+        {slide && Object.keys(datas.length) ? (
+          <ClickSildeTrending datas={datas} cbIndex={index} />
+        ) : button ? (
+          <CartSildeTrending />
+        ) : null}
       </div>
       <div className="trending-right">
         <div className="background-img">
           <div className="background-1">
             <div className="background-1-1"></div>
             <div className="background-1-2">
-              <div className="background-3" onMouseLeave={()=>setHover(false)} onMouseOver={()=>setHover(true)}>
-                <img src={hover? datas[slideIndex].waterUrl : datas[slideIndex].url} alt={datas[slideIndex].name} />
+              <div
+                className="background-3"
+                onMouseLeave={() => setHover(false)}
+                onMouseOver={() => setHover(true)}
+              >
+                <img
+                  src={
+                    hover ? datas[slideIndex].waterUrl : datas[slideIndex].url
+                  }
+                  alt={datas[slideIndex].name}
+                />
               </div>
             </div>
           </div>

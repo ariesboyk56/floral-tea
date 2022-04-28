@@ -1,0 +1,103 @@
+.ratingView {
+  width: 459px;
+  color: #939494;
+  letter-spacing: 0.05em;
+  // margin: auto;
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+    .rating-content {
+      text-align: center;
+      h1 {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #056552;
+      }
+      .rating-content_vote {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 12px;
+    }
+    .rating-content_vote > span:nth-child(2) {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #393a3a;
+    }
+    .rating-content_vote > span:nth-child(3) {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: capitalize;
+        color: #939494;
+    }
+    }
+    .view-content {
+        color: #000000;
+        .view-content_list{
+            width: 100%;
+            .view-content_item{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0 6px;
+                .view-content_inputRange{
+                    flex: 9;
+                    transform: translateY(4px);
+                }
+                .view-content_img {
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .ratingView {
+        width: 288px;
+        &-wrapper {
+          gap: 16px 0;
+          .rating-content {
+            h1 {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            .rating-content_vote {
+              gap: 0 8px;
+          }
+          .rating-content_desc{
+            font-size: 12px;
+            line-height: 15px;
+            white-space: nowrap;
+          }
+          }
+          .view-content {
+              .view-content_list{
+                  width: 100%;
+                  .view-content_item{
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 18px;
+                    height: 44px;
+                    overflow: hidden;
+                      .view-content_inputRange{
+                          flex: 9;
+                          transform: translateY(4px);
+                      }
+                      .view-content_img {
+                          transform: translateY(-2px);
+                      }
+                  }
+              }
+          }
+        }
+      }
+}
