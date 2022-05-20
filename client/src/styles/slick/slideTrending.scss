@@ -100,6 +100,47 @@
         }
       }
     }
+    .cart {
+      padding-left: 54px;
+      .cart-item + .cart-item {
+        margin-top: 23px;
+      }
+      .cart_package,
+      .cart_action {
+        display: flex;
+        gap: 0 32px;
+        align-items: center;
+      }
+      .atc_quantity {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .quantity-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 56px;
+          height: 56px;
+          background-color: #b3b5b5;
+          user-select: none;
+          -moz-user-select: none;
+          -o-user-select: none;
+          -webkit-user-select: none;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.8;
+          }
+          &:nth-child(2) {
+            background-color: #ffffff;
+            opacity: 1;
+            cursor: default;
+          }
+        }
+      }
+      .btn.primary {
+        margin: 0;
+      }
+    }
   }
   .trending-right {
     .background-img {
@@ -230,6 +271,32 @@
           }
         }
       }
+      .cart {
+        padding-left: 20px;
+        .cart-item + .cart-item {
+          margin-top: 8px;
+        }
+        .cart_package,
+        .cart_action {
+          gap: 0 16px;
+        }
+        .atc_quantity {
+          .quantity-item {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+          }
+        }
+        .style-btn-1-1.w277h62 {
+          width: 167px;
+          height: 32px;
+          margin: 0;
+          .btn.primary.style-btn-1-2.w277h62 {
+            font-size: 10px;
+            line-height: 12px;
+          }
+        }
+      }
     }
     .trending-right {
       .background-img {
@@ -320,6 +387,32 @@
           height: 56px;
           &.active::after {
             width: 28px;
+          }
+        }
+      }
+      .cart {
+        padding-left: 31px;
+        .cart-item + .cart-item {
+          margin-top: 8px;
+        }
+        .cart_package,
+        .cart_action {
+          gap: 0 16px;
+        }
+        .atc_quantity {
+          .quantity-item {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+          }
+        }
+        .style-btn-1-1.w277h62 {
+          width: 167px;
+          height: 32px;
+          margin: 0;
+          .btn.primary.style-btn-1-2.w277h62 {
+            font-size: 10px;
+            line-height: 12px;
           }
         }
       }
